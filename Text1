@@ -1,0 +1,198 @@
+Operators in Python are symbols used to perform operations on variables and values. Here are the main types:
+
+1.Arithmetic Operators: Perform mathematical operations.
+    + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus), ** (Exponentiation), // (Floor Division).
+
+2.Comparison (Relational) Operators: Compare two values and return True or False.
+    == (Equal), != (Not equal), > (Greater than), < (Less than), >= (Greater than or equal to), <= (Less than or equal to).
+
+3.Assignment Operators: Assign values to variables.
+    = (Assign), +=, -=, *=, /=, %= (Compound assignments), etc.
+
+4.Logical Operators: Combine conditional statements.
+    and, or, not.
+
+5.Bitwise Operators: Perform operations at the bit level.
+    & (AND), | (OR), ^ (XOR), ~ (NOT), << (Left shift), >> (Right shift).
+
+6.Membership Operators: Test membership in a sequence.
+    in, not in.
+
+7.Identity Operators: Compare memory locations of objects.
+    is, is not.
+
+8.Unary Operators: Operate on a single operand.
+    - (Unary minus), + (Unary plus), not.
+
+
+## Data Types in Python
+
+In Python, data types specify the kind of value a variable can hold. Here's an overview of the main data types:
+
+1. Numeric Types:
+    - int: Represents integers (whole numbers).
+        Example: x = 10
+
+    - float: Represents decimal numbers.
+        Example: pi = 3.14
+
+    - complex: Represents complex numbers (with a real and imaginary part).
+        Example: z = 2 + 3j
+
+2. Sequence Types:
+    - str: Represents strings (text data).
+        Example: name = "Alice"
+
+    - list: Represents ordered, mutable collections.
+        Example: colors = ["red", "green", "blue"]
+
+    - tuple: Represents ordered, immutable collections.
+        Example: coordinates = (10, 20)
+
+3. Mapping Type:
+    - dict: Represents key-value pairs (like a hash map).
+        Example: student = {"name": "Alice", "age": 20}
+
+4. Set Types:
+    - set: Represents unordered, unique collections.
+        Example: numbers = {1, 2, 3}
+
+    - frozenset: Represents immutable sets.
+        Example: immutable_set = frozenset({1, 2, 3})
+
+5. Boolean Type:
+    - bool: Represents True or False.
+        Example: is_valid = True
+
+6. Binary Types:
+    - bytes: Represents immutable byte sequences.
+        Example: b = b"Hello"
+
+    - bytearray: Represents mutable byte sequences.
+        Example: ba = bytearray(5)
+
+    - memoryview: Provides a memory view of byte data.
+        Example: mv = memoryview(b"Hello")
+
+7. None Type:
+   - NoneType: Represents the absence of a value or null.
+        Example: result = None
+
+8.Dynamic Typing:
+    - Python is dynamically typed, meaning you don’t need to declare the data type explicitly. The interpreter determines it at runtime.
+        Example:
+            x = 42       # int
+            x = "Hello"  # str
+
+
+
+##Identifiers in Python
+Identifiers are the names used to identify variables, functions, classes, or other objects in Python.
+They help refer to specific data or functionality in the code.
+
+Rules for Naming Identifiers:
+1.Valid Characters:
+    Must start with a letter (a-z or A-Z) or an underscore (_).
+    Can contain letters, digits (0-9), and underscores (_) after the first character.
+    Example: my_var, _temp, age123.
+
+2.Case Sensitivity:
+    Python identifiers are case-sensitive.
+    Example: Name, name, and NAME are three different identifiers.
+
+3.Cannot Be a Keyword:
+    Identifiers cannot be the same as Python keywords (e.g., if, for, class).
+
+4.No Special Characters:
+    Identifiers cannot contain special characters like @, $, %, etc.
+
+5.No Spaces:
+    Spaces are not allowed in identifiers. Use underscores instead.
+    Example: user_name instead of user name.
+
+    Examples of Valid Identifiers:
+        variable
+        _init_
+        max_value
+        count2
+
+    Examples of Invalid Identifiers:
+
+        2start (cannot start with a digit)
+        user-name (hyphens are not allowed)
+        class (Python keyword)
+
+Best Practices:
+    1.Use meaningful names to make code readable.
+        Example: Use total_price instead of tp.
+    2.Follow naming conventions:
+        Snake case for variables and functions: calculate_sum.
+    3.Pascal case for classes: EmployeeDetails.
+        Avoid single-character identifiers except for loop counters (i, j, etc.).
+
+
+
+
+# Input In Python
+
+
+In Python, the input() function is used to take user input. It allows the user to enter data during program execution,
+which the program can then process.
+
+    Syntax:
+        input(prompt)
+
+    - prompt: (Optional) A string displayed to the user as a message before taking input.
+
+Key Points:
+
+1.Returns a String:
+    The input() function always returns the user input as a string, regardless of what is entered.
+    Example:
+    - code
+        name = input("Enter your name: ")
+        print(f"Hello, {name}!")
+
+2.Type Conversion:
+    If you need a specific data type (e.g., integer or float), you must convert the input explicitly using int(), float(), etc.
+    Example:
+    - code
+        age = int(input("Enter your age: "))
+        print(f"You are {age} years old.")
+
+3.Default Behavior:
+    If no prompt is provided, the program will wait silently for the user to input something.
+    Examples:
+    Simple Input:
+    - code
+        username = input("What is your username? ")
+        print(f"Welcome, {username}!")
+
+4.Input with Type Conversion:
+    - code
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        print(f"The sum is: {num1 + num2}")
+
+5.Using Input in a Conditional:
+    - code
+        password = input("Enter your password: ")
+        if password == "admin":
+            print("Access granted!")
+        else:
+            print("Access denied.")
+
+6.Multiple Inputs in One Line:
+    Use the split() method to take multiple inputs at once.
+    - code
+        x, y = input("Enter two numbers separated by a space: ").split()
+        print(f"First number: {x}, Second number: {y}")
+
+7.Error Handling:
+    Wrap input() with a try-except block to handle invalid inputs.
+    - code
+        try:
+            value = int(input("Enter a number: "))
+            print(f"You entered {value}")
+        except ValueError:
+            print("Invalid input! Please enter a number.")
